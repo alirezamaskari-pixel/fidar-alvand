@@ -1,499 +1,597 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>فیدار الوند پلاست | تولیدکننده انواع نی نوشیدنی</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <style>
         :root {
-            --primary-color: #0d6efd;
-            --secondary-color: #20c997;
-            --accent-color: #ff6b35;
-            --light-color: #f8f9fa;
-            --dark-color: #343a40;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --primary-blue: #0d6efd;
+            --primary-dark: #1a73e8;
+            --secondary-green: #20c997;
+            --accent-orange: #ff6b35;
+            --bg-body: #f4f8fe;
+            --bg-card: #ffffff;
+            --bg-light-gray: #e9edf2;
+            --text-dark: #1e293b;
+            --text-muted: #4a5a72;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 12px 32px rgba(13, 110, 253, 0.12);
+            --radius: 16px;
             --transition: all 0.3s ease;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Vazirmatn', 'Noto Naskh Arabic', sans-serif;
+            background: var(--bg-body);
+            color: var(--text-dark);
             line-height: 1.7;
-            color: #333;
-            background-color: #f9f9f9;
         }
-        
+
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
-        
-        /* Header Styles */
+
+        /* ----- HEADER (رنگی) ----- */
         header {
-            background: linear-gradient(135deg, var(--primary-color), #1a73e8);
-            color: white;
-            padding: 1.5rem 0;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            padding: 1.2rem 0;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 4px 20px rgba(13, 110, 253, 0.25);
             position: relative;
-            overflow: hidden;
+            border-bottom: 3px solid var(--secondary-green);
         }
-        
+
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 15px;
+            gap: 14px;
         }
-        
-        .logo-icon {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
+
+        .logo-img {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
         }
-        
+
         .company-name {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 700;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            letter-spacing: 0.5px;
         }
-        
+
         .tagline {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 2px;
         }
-        
-        /* Hero Section */
+
+        /* ----- HERO (روشن) ----- */
         .hero {
-            padding: 60px 0;
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .hero-content {
+            padding: 30px 0 10px;
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
         }
-        
+
         .hero h1 {
-            color: var(--dark-color);
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
             font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
         }
-        
+
+        .hero h1 span {
+            color: var(--primary-blue);
+        }
+
         .hero p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 30px;
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 12px;
         }
-        
-        /* Contact Cards */
-        .contact-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+
+        /* ----- دسته‌بندی محصولات ----- */
+        .product-categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 18px 0 22px;
         }
-        
-        .contact-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
+
+        .category-chip {
+            background: var(--bg-card);
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-dark);
             box-shadow: var(--shadow);
+            border: 1px solid rgba(13, 110, 253, 0.12);
             transition: var(--transition);
-            text-align: center;
-            border-top: 5px solid var(--primary-color);
+            cursor: default;
         }
-        
-        .contact-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+        .category-chip:hover {
+            background: var(--primary-blue);
+            color: #fff;
+            border-color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
         }
-        
-        .contact-card i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .contact-card h3 {
-            color: var(--dark-color);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-        
-        .contact-card p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-        
-        .contact-link {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        
-        .contact-link:hover {
-            color: var(--accent-color);
-        }
-        
-        /* Address Section */
-        .address-section {
-            background-color: var(--light-color);
-            padding: 50px 0;
-            margin-top: 50px;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .address-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .address-card i {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
-        
-        .address-card h3 {
-            color: var(--dark-color);
-            margin-bottom: 20px;
-            font-size: 1.6rem;
-        }
-        
-        .address-text {
-            font-size: 1.2rem;
-            color: #555;
-            line-height: 1.8;
-        }
-        
-        /* Social Section */
-        .social-section {
-            padding: 50px 0;
-            text-align: center;
-        }
-        
-        .social-section h2 {
-            color: var(--dark-color);
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-        
-        .instagram-card {
-            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-            color: white;
-            border-radius: 15px;
-            padding: 30px;
-            max-width: 500px;
-            margin: 0 auto;
-            box-shadow: var(--shadow);
-        }
-        
-        .instagram-card i {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        .instagram-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-        }
-        
-        .instagram-id {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 50px;
-            display: inline-block;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-top: 15px;
-        }
-        
-        .instagram-link {
-            display: inline-block;
-            margin-top: 20px;
-            color: white;
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        
-        .instagram-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            color: white;
-            text-decoration: none;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        
-        .copyright {
-            opacity: 0.8;
-            margin-top: 15px;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .company-name {
-                font-size: 1.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .contact-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        .delay-1 {
-            animation-delay: 0.2s;
-        }
-        
-        .delay-2 {
-            animation-delay: 0.4s;
-        }
-        
-        .delay-3 {
-            animation-delay: 0.6s;
-        }
-        
-        /* Products Preview */
-        .products-preview {
-            padding: 50px 0;
-            background-color: white;
-        }
-        
-        .products-preview h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--dark-color);
-            font-size: 2rem;
-        }
-        
-        .product-items {
+
+        /* ----- محصولات (آیکون‌های رنگی) ----- */
+        .product-icons {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
+            margin: 10px 0 10px;
         }
-        
-        .product-item {
-            width: 120px;
-            height: 120px;
-            background: var(--light-color);
-            border-radius: 50%;
-            display: flex;
+
+        .product-icons span {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.5rem;
-            color: var(--primary-color);
+            width: 70px;
+            height: 70px;
+            background: var(--bg-card);
+            border-radius: 50%;
+            font-size: 2.2rem;
+            color: var(--primary-blue);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border: 2px solid transparent;
         }
-        
-        .product-item:hover {
-            transform: scale(1.1);
-            color: var(--accent-color);
+
+        .product-icons span:hover {
+            transform: translateY(-6px) scale(1.05);
+            color: var(--accent-orange);
+            border-color: var(--accent-orange);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* ----- کارت‌های تماس (4 کارتی) ----- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 24px;
+            margin: 30px 0 40px;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 28px 18px 22px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.03), rgba(32, 201, 151, 0.03));
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--accent-orange);
+        }
+
+        .contact-card i {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-link {
+            display: inline-block;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+            word-break: break-all;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-orange);
+        }
+
+        .whatsapp-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 4px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .whatsapp-group .contact-link {
+            font-size: 0.95rem;
+        }
+
+        /* ----- آدرس (روشن) ----- */
+        .address-section {
+            background: var(--bg-light-gray);
+            padding: 32px 0;
+            border-top: 1px solid rgba(13, 110, 253, 0.08);
+            border-bottom: 1px solid rgba(13, 110, 253, 0.08);
+            margin: 10px 0 30px;
+        }
+
+        .address-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-right: 6px solid var(--secondary-green);
+        }
+
+        .address-card i {
+            font-size: 2rem;
+            color: var(--secondary-green);
+            margin-bottom: 6px;
+        }
+
+        .address-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+            color: var(--text-dark);
+        }
+
+        .address-text {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .address-text small {
+            color: #7a8aa0;
+            font-size: 0.85rem;
+        }
+
+        /* ----- اینستاگرام (گرادیان رنگی) ----- */
+        .social-section {
+            padding: 15px 0 40px;
+            text-align: center;
+        }
+
+        .social-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .instagram-card {
+            background: linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            max-width: 420px;
+            margin: 0 auto;
+            box-shadow: 0 12px 30px rgba(225, 48, 108, 0.25);
+            color: #fff;
+        }
+
+        .instagram-card i {
+            font-size: 2.4rem;
+            margin-bottom: 6px;
+        }
+
+        .instagram-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+        }
+
+        .instagram-card p {
+            font-size: 0.9rem;
+            opacity: 0.92;
+            margin-bottom: 12px;
+        }
+
+        .instagram-id {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 20px;
+            border-radius: 40px;
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            backdrop-filter: blur(4px);
+        }
+
+        .instagram-link {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 28px;
+            border-radius: 40px;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .instagram-link:hover {
+            background: rgba(255, 255, 255, 0.35);
+            color: #fff;
+            transform: scale(1.02);
+        }
+
+        /* ----- فوتر (تیره اما با المان‌های رنگی) ----- */
+        footer {
+            background: #1a202c;
+            color: #e2e8f0;
+            padding: 22px 0;
+            text-align: center;
+            border-top: 4px solid var(--secondary-green);
+        }
+
+        footer .logo-container {
+            margin-bottom: 2px;
+        }
+        footer .logo-img {
+            height: 42px;
+            filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        footer .company-name {
+            font-size: 1.2rem;
+            color: #fff;
+            text-shadow: none;
+        }
+        footer .tagline {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 2px;
+        }
+        .footer-links {
+            margin: 8px 0 4px;
+            font-size: 0.9rem;
+        }
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            color: var(--secondary-green);
+        }
+        .copyright {
+            color: #64748b;
+            font-size: 0.8rem;
+            margin-top: 6px;
+        }
+
+        /* ----- واکنش‌گرا ----- */
+        @media (max-width: 768px) {
+            .company-name {
+                font-size: 1.3rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .logo-img {
+                height: 42px;
+            }
+            .product-icons span {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+            .category-chip {
+                font-size: 0.8rem;
+                padding: 6px 14px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="container">
             <div class="logo-container">
-                <i class="fas fa-recycle logo-icon"></i>
-                <h1 class="company-name">فیدار الوند پلاست</h1>
+                <img src="https://fidaralvand.com/wp-content/uploads/2024/12/WhatsApp_Image_2024-12-02_at_10.34.52_AM-removebg-preview-1.png"
+                     alt="فیدار الوند پلاست"
+                     class="logo-img" />
+                <span class="company-name">فیدار الوند پلاست</span>
             </div>
-            <p class="tagline">تولیدکننده انواع نی نوشیدنی با بالاترین کیفیت</p>
+            <p class="tagline">تولیدکننده انواع نی نوشیدنی با کیفیت ممتاز</p>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content animate">
-                <h1>نی‌های نوشیدنی با کیفیت ممتاز</h1>
-                <p>با بیش از یک دهه تجربه در تولید نی‌های پلاستیکی برای انواع نوشیدنی‌ها، همیشه بهترین انتخاب برای کسب‌وکار شما هستیم. کیفیت، تنوع و قیمت رقابتی از ویژگی‌های محصولات ماست.</p>
-                
-                <div class="products-preview">
-                    <h2>محصولات ما</h2>
-                    <div class="product-items">
-                        <div class="product-item">
-                            <i class="fas fa-wine-bottle"></i>
-                        </div>
-                        <div class="product-item">
-                            <i class="fas fa-cocktail"></i>
-                        </div>
-                        <div class="product-item">
-                            <i class="fas fa-coffee"></i>
-                        </div>
-                        <div class="product-item">
-                            <i class="fas fa-mug-hot"></i>
-                        </div>
-                    </div>
-                </div>
+            <h1>نی‌های <span>نوشیدنی</span> با کیفیت عالی</h1>
+            <p>بیش از یک دهه تجربه در تولید انواع نی‌های پلاستیکی با مرغوب‌ترین مواد اولیه</p>
+
+            <!-- دسته‌بندی محصولات -->
+            <div class="product-categories">
+                <span class="category-chip">نی ساده</span>
+                <span class="category-chip">نی خم‌شونده</span>
+                <span class="category-chip">نی مخصوص سرد و گرم</span>
+                <span class="category-chip">نی رنگی و طرح‌دار</span>
+                <span class="category-chip">نی‌های صنعتی و فله</span>
+            </div>
+
+            <!-- آیکون‌های نوشیدنی -->
+            <div class="product-icons">
+                <span><i class="fas fa-wine-bottle"></i></span>
+                <span><i class="fas fa-cocktail"></i></span>
+                <span><i class="fas fa-coffee"></i></span>
+                <span><i class="fas fa-mug-hot"></i></span>
             </div>
         </div>
     </section>
 
-    <!-- Contact Information -->
+    <!-- ===== کارت‌های تماس (4 کارت: تلفن، واتساپ، ایمیل، وب‌سایت) ===== -->
     <section class="container">
-        <div class="contact-cards">
-            <!-- Phone Card -->
-            <div class="contact-card animate delay-1">
+        <div class="contact-grid">
+
+            <!-- تلفن -->
+            <div class="contact-card">
                 <i class="fas fa-phone-alt"></i>
                 <h3>تماس تلفنی</h3>
-                <p>برای مشاوره، استعلام قیمت و سفارش محصول</p>
+                <p>مشاوره و سفارش</p>
                 <a href="tel:02645330426" class="contact-link">
-                    <i class="fas fa-phone-volume me-2"></i> ۰۲۶۴۵۳۳۰۴۲۶
+                    <i class="fas fa-phone-volume me-1"></i> ۰۲۶۴۵۳۳۰۴۲۶
                 </a>
             </div>
-            
-            <!-- WhatsApp Card -->
-            <div class="contact-card animate delay-2">
-                <i class="fab fa-whatsapp"></i>
+
+            <!-- واتساپ (دو شماره) -->
+            <div class="contact-card" style="border-top-color: var(--secondary-green);">
+                <i class="fab fa-whatsapp" style="color: #25D366;"></i>
                 <h3>واتساپ</h3>
-                <p>ارسال پیام از طریق واتساپ</p>
-                <a href="https://wa.me/989121278025" target="_blank" class="contact-link">
-                    <i class="fab fa-whatsapp me-2"></i> ۰۹۱۲۱۲۷۸۰۲۵
-                </a>
+                <p>ارسال پیام مستقیم</p>
+                <div class="whatsapp-group">
+                    <a href="https://wa.me/989123952064" target="_blank" class="contact-link">
+                        <i class="fab fa-whatsapp me-1" style="color: #25D366;"></i> ۰۹۱۲۳۹۵۲۰۶۴
+                    </a>
+                    <a href="https://wa.me/989121278025" target="_blank" class="contact-link">
+                        <i class="fab fa-whatsapp me-1" style="color: #25D366;"></i> ۰۹۱۲۱۲۷۸۰۲۵
+                    </a>
+                </div>
             </div>
-            
-            <!-- Email Card -->
-            <div class="contact-card animate delay-3">
-                <i class="fas fa-envelope"></i>
+
+            <!-- ایمیل -->
+            <div class="contact-card" style="border-top-color: var(--accent-orange);">
+                <i class="fas fa-envelope" style="color: var(--accent-orange);"></i>
                 <h3>ایمیل</h3>
-                <p>ارسال ایمیل برای اطلاعات بیشتر</p>
+                <p>ارسال درخواست</p>
                 <a href="mailto:info@fidaralvand.com" class="contact-link">
-                    <i class="fas fa-paper-plane me-2"></i> info@fidaralvand.com
+                    <i class="fas fa-paper-plane me-1"></i> info@fidaralvand.com
                 </a>
             </div>
+
+            <!-- وب‌سایت (جدید) -->
+            <div class="contact-card" style="border-top-color: #8b5cf6;">
+                <i class="fas fa-globe" style="color: #8b5cf6;"></i>
+                <h3>وب‌سایت</h3>
+                <p>مشاهده محصولات و خدمات</p>
+                <a href="https://fidaralvand.com" target="_blank" class="contact-link">
+                    <i class="fas fa-external-link-alt me-1"></i> fidaralvand.com
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <!-- Address Section -->
+    <!-- ===== آدرس ===== -->
     <section class="address-section">
         <div class="container">
-            <div class="address-card animate">
+            <div class="address-card">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>آدرس کارخانه</h3>
                 <div class="address-text">
-                    استان البرز، شهرستان نظرآباد، شهرک صنعتی سپهر<br>
-                    خیابان مرداد شرقی، پلاک ۱۳<br>
-                    <small>(جهت بازدید و دریافت نمونه محصول)</small>
+                    استان البرز، شهرستان نظرآباد، شهرک صنعتی سپهر<br />
+                    خیابان مرداد شرقی، پلاک ۱۳
+                    <br /><small>(جهت بازدید و دریافت نمونه محصول)</small>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Instagram Section -->
+    <!-- ===== اینستاگرام ===== -->
     <section class="social-section">
         <div class="container">
-            <h2 class="animate">ما را در اینستاگرام دنبال کنید</h2>
-            <div class="instagram-card animate delay-1">
+            <h2>ما را در اینستاگرام دنبال کنید</h2>
+            <div class="instagram-card">
                 <i class="fab fa-instagram"></i>
-                <h3>پیج اینستاگرام فیدار الوند پلاست</h3>
-                <p>برای مشاهده محصولات، اخبار و تخفیف‌های ویژه</p>
+                <h3>فیدار الوند پلاست</h3>
+                <p>محصولات، اخبار و تخفیف‌های ویژه</p>
                 <div class="instagram-id">@fidar.alvand2023</div>
                 <a href="https://instagram.com/fidar.alvand2023" target="_blank" class="instagram-link">
-                    <i class="fab fa-instagram me-2"></i> مشاهده پیج اینستاگرام
+                    <i class="fab fa-instagram me-1"></i> مشاهده پیج
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== فوتر ===== -->
     <footer>
         <div class="container">
             <div class="logo-container">
-                <i class="fas fa-recycle logo-icon"></i>
-                <h3 class="company-name">فیدار الوند پلاست</h3>
+                <img src="https://fidaralvand.com/wp-content/uploads/2024/12/WhatsApp_Image_2024-12-02_at_10.34.52_AM-removebg-preview-1.png"
+                     alt="فیدار الوند پلاست"
+                     class="logo-img" />
+                <span class="company-name">فیدار الوند پلاست</span>
             </div>
             <p class="tagline">تولیدکننده انواع نی نوشیدنی با استانداردهای بین‌المللی</p>
-            <p class="copyright">تمامی حقوق این وبسایت محفوظ است © ۱۴۰۲</p>
+            <div class="footer-links">
+                <a href="https://fidaralvand.com" target="_blank">
+                    <i class="fas fa-globe me-1"></i> fidaralvand.com
+                </a>
+            </div>
+            <p class="copyright">
+                تمامی حقوق محفوظ است © <span id="solar-year"></span>
+            </p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Add animation on scroll
         document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.animate');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-            
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(el);
-            });
-            
-            // Current year in footer
-            const currentYear = new Date().getFullYear();
-            const solarYear = currentYear - 621;
-            document.querySelector('.copyright').innerHTML = `تمامی حقوق این وبسایت محفوظ است © ${solarYear}`;
+            // تنظیم سال شمسی در فوتر
+            const now = new Date();
+            const solarYear = now.getFullYear() - 621;
+            document.getElementById('solar-year').textContent = solarYear;
         });
     </script>
+
 </body>
 </html>
