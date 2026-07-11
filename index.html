@@ -43,7 +43,7 @@
             padding: 0 20px;
         }
 
-        /* ----- HEADER (رنگی) ----- */
+        /* ----- HEADER ----- */
         header {
             background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
             padding: 1.2rem 0;
@@ -81,7 +81,7 @@
             margin-top: 2px;
         }
 
-        /* ----- HERO (روشن) ----- */
+        /* ----- HERO ----- */
         .hero {
             padding: 30px 0 10px;
             text-align: center;
@@ -135,7 +135,7 @@
             box-shadow: var(--shadow-hover);
         }
 
-        /* ----- محصولات (آیکون‌های رنگی) ----- */
+        /* ----- محصولات (آیکون‌ها) ----- */
         .product-icons {
             display: flex;
             justify-content: center;
@@ -220,6 +220,14 @@
             z-index: 1;
         }
 
+        .contact-card .subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
         .contact-card p {
             font-size: 0.9rem;
             color: var(--text-muted);
@@ -257,7 +265,7 @@
             font-size: 0.95rem;
         }
 
-        /* ----- آدرس (روشن) ----- */
+        /* ----- آدرس ----- */
         .address-section {
             background: var(--bg-light-gray);
             padding: 32px 0;
@@ -300,7 +308,7 @@
             font-size: 0.85rem;
         }
 
-        /* ----- اینستاگرام (گرادیان رنگی) ----- */
+        /* ----- اینستاگرام ----- */
         .social-section {
             padding: 15px 0 40px;
             text-align: center;
@@ -369,7 +377,7 @@
             transform: scale(1.02);
         }
 
-        /* ----- فوتر (تیره اما با المان‌های رنگی) ----- */
+        /* ----- فوتر ----- */
         footer {
             background: #1a202c;
             color: #e2e8f0;
@@ -406,6 +414,22 @@
         }
         .footer-links a:hover {
             color: var(--secondary-green);
+        }
+        .made-in-iran {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 6px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 16px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .made-in-iran i {
+            color: var(--secondary-green);
+            font-size: 1rem;
         }
         .copyright {
             color: #64748b;
@@ -480,52 +504,47 @@
         </div>
     </section>
 
-    <!-- ===== کارت‌های تماس (4 کارت: تلفن، واتساپ، ایمیل، وب‌سایت) ===== -->
+    <!-- ===== کارت‌های تماس (بر اساس اطلاعات عکس) ===== -->
     <section class="container">
         <div class="contact-grid">
 
-            <!-- تلفن -->
+            <!-- مدیرعامل -->
             <div class="contact-card">
-                <i class="fas fa-phone-alt"></i>
-                <h3>تماس تلفنی</h3>
-                <p>مشاوره و سفارش</p>
-                <a href="tel:02645330426" class="contact-link">
-                    <i class="fas fa-phone-volume me-1"></i> ۰۲۶۴۵۳۳۰۴۲۶
+                <i class="fas fa-user-tie"></i>
+                <h3>داود نصرالهی</h3>
+                <div class="subtitle">مدیر عامل</div>
+                <a href="tel:09121278025" class="contact-link">
+                    <i class="fas fa-phone-volume me-1"></i> ۰۹۱۲۱۲۷۸۰۲۵
                 </a>
             </div>
 
-            <!-- واتساپ (دو شماره) -->
+            <!-- مدیر تولید -->
             <div class="contact-card" style="border-top-color: var(--secondary-green);">
-                <i class="fab fa-whatsapp" style="color: #25D366;"></i>
-                <h3>واتساپ</h3>
-                <p>ارسال پیام مستقیم</p>
-                <div class="whatsapp-group">
-                    <a href="https://wa.me/989123952064" target="_blank" class="contact-link">
-                        <i class="fab fa-whatsapp me-1" style="color: #25D366;"></i> ۰۹۱۲۳۹۵۲۰۶۴
-                    </a>
-                    <a href="https://wa.me/989121278025" target="_blank" class="contact-link">
-                        <i class="fab fa-whatsapp me-1" style="color: #25D366;"></i> ۰۹۱۲۱۲۷۸۰۲۵
-                    </a>
-                </div>
+                <i class="fas fa-user-cog" style="color: var(--secondary-green);"></i>
+                <h3>مصطفی نصرالهی</h3>
+                <div class="subtitle">مدیر تولید</div>
+                <a href="tel:09123952064" class="contact-link">
+                    <i class="fas fa-phone-volume me-1"></i> ۰۹۱۲۳۹۵۲۰۶۴
+                </a>
             </div>
 
             <!-- ایمیل -->
             <div class="contact-card" style="border-top-color: var(--accent-orange);">
                 <i class="fas fa-envelope" style="color: var(--accent-orange);"></i>
                 <h3>ایمیل</h3>
-                <p>ارسال درخواست</p>
-                <a href="mailto:info@fidaralvand.com" class="contact-link">
-                    <i class="fas fa-paper-plane me-1"></i> info@fidaralvand.com
+                <div class="subtitle">ارسال درخواست</div>
+                <a href="mailto:alvandfidar@gmail.com" class="contact-link">
+                    <i class="fas fa-paper-plane me-1"></i> alvandfidar@gmail.com
                 </a>
             </div>
 
-            <!-- وب‌سایت (جدید) -->
+            <!-- وب‌سایت -->
             <div class="contact-card" style="border-top-color: #8b5cf6;">
                 <i class="fas fa-globe" style="color: #8b5cf6;"></i>
                 <h3>وب‌سایت</h3>
-                <p>مشاهده محصولات و خدمات</p>
-                <a href="https://fidaralvand.com" target="_blank" class="contact-link">
-                    <i class="fas fa-external-link-alt me-1"></i> fidaralvand.com
+                <div class="subtitle">مشاهده محصولات</div>
+                <a href="https://fidaralvandplast.ir" target="_blank" class="contact-link">
+                    <i class="fas fa-external-link-alt me-1"></i> fidaralvandplast.ir
                 </a>
             </div>
 
@@ -574,9 +593,12 @@
             </div>
             <p class="tagline">تولیدکننده انواع نی نوشیدنی با استانداردهای بین‌المللی</p>
             <div class="footer-links">
-                <a href="https://fidaralvand.com" target="_blank">
-                    <i class="fas fa-globe me-1"></i> fidaralvand.com
+                <a href="https://fidaralvandplast.ir" target="_blank">
+                    <i class="fas fa-globe me-1"></i> fidaralvandplast.ir
                 </a>
+            </div>
+            <div class="made-in-iran">
+                <i class="fas fa-flag"></i> ساخت ایران
             </div>
             <p class="copyright">
                 تمامی حقوق محفوظ است © <span id="solar-year"></span>
@@ -586,7 +608,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // تنظیم سال شمسی در فوتر
             const now = new Date();
             const solarYear = now.getFullYear() - 621;
             document.getElementById('solar-year').textContent = solarYear;
