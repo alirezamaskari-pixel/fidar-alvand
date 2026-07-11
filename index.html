@@ -13,6 +13,7 @@
             --primary-dark: #1a73e8;
             --secondary-green: #20c997;
             --accent-orange: #ff6b35;
+            --whatsapp-color: #25D366;
             --bg-body: #f4f8fe;
             --bg-card: #ffffff;
             --bg-light-gray: #e9edf2;
@@ -169,7 +170,7 @@
         /* ----- کارت‌های تماس (4 کارتی) ----- */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 24px;
             margin: 30px 0 40px;
         }
@@ -177,7 +178,7 @@
         .contact-card {
             background: var(--bg-card);
             border-radius: var(--radius);
-            padding: 28px 18px 22px;
+            padding: 24px 18px 20px;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -207,36 +208,103 @@
         .contact-card i {
             font-size: 2.2rem;
             color: var(--primary-blue);
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             position: relative;
             z-index: 1;
         }
 
         .contact-card h3 {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 2px;
+            margin-bottom: 0;
             position: relative;
             z-index: 1;
         }
 
         .contact-card .subtitle {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             position: relative;
             z-index: 1;
         }
 
-        .contact-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
+        .phone-number {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            direction: ltr;
+            display: inline-block;
+            margin-bottom: 10px;
+            background: rgba(13, 110, 253, 0.06);
+            padding: 2px 14px;
+            border-radius: 30px;
             position: relative;
             z-index: 1;
+        }
+        .phone-number i {
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+            margin-left: 6px;
+        }
+
+        .contact-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+            margin-top: 4px;
         }
 
         .contact-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 40px;
+            transition: var(--transition);
+            background: var(--primary-blue);
+            border: 1px solid transparent;
+            min-width: 80px;
+        }
+
+        .contact-link i {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: #fff;
+        }
+
+        .contact-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            color: #fff;
+        }
+
+        .contact-link.call-link {
+            background: var(--primary-blue);
+        }
+
+        .contact-link.call-link:hover {
+            background: #0b5ed7;
+        }
+
+        .contact-link.whatsapp-link {
+            background: var(--whatsapp-color);
+        }
+
+        .contact-link.whatsapp-link:hover {
+            background: #1ebe5c;
+        }
+
+        .contact-card .single-link {
             display: inline-block;
             color: var(--primary-blue);
             text-decoration: none;
@@ -248,21 +316,8 @@
             word-break: break-all;
         }
 
-        .contact-link:hover {
+        .contact-card .single-link:hover {
             color: var(--accent-orange);
-        }
-
-        .whatsapp-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin-top: 4px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .whatsapp-group .contact-link {
-            font-size: 0.95rem;
         }
 
         /* ----- آدرس ----- */
@@ -437,7 +492,6 @@
             margin-top: 6px;
         }
 
-        /* ----- واکنش‌گرا ----- */
         @media (max-width: 768px) {
             .company-name {
                 font-size: 1.3rem;
@@ -460,6 +514,14 @@
             .category-chip {
                 font-size: 0.8rem;
                 padding: 6px 14px;
+            }
+            .contact-actions {
+                gap: 8px;
+            }
+            .contact-link {
+                font-size: 0.8rem;
+                padding: 5px 12px;
+                min-width: 70px;
             }
         }
     </style>
@@ -485,7 +547,6 @@
             <h1>نی‌های <span>نوشیدنی</span> با کیفیت عالی</h1>
             <p>بیش از یک دهه تجربه در تولید انواع نی‌های پلاستیکی با مرغوب‌ترین مواد اولیه</p>
 
-            <!-- دسته‌بندی محصولات -->
             <div class="product-categories">
                 <span class="category-chip">نی ساده</span>
                 <span class="category-chip">نی خم‌شونده</span>
@@ -494,7 +555,6 @@
                 <span class="category-chip">نی‌های صنعتی و فله</span>
             </div>
 
-            <!-- آیکون‌های نوشیدنی -->
             <div class="product-icons">
                 <span><i class="fas fa-wine-bottle"></i></span>
                 <span><i class="fas fa-cocktail"></i></span>
@@ -504,47 +564,63 @@
         </div>
     </section>
 
-    <!-- ===== کارت‌های تماس (بر اساس اطلاعات عکس) ===== -->
+    <!-- ===== کارت‌های تماس ===== -->
     <section class="container">
         <div class="contact-grid">
 
-            <!-- مدیرعامل -->
+            <!-- 1. مدیرعامل -->
             <div class="contact-card">
                 <i class="fas fa-user-tie"></i>
                 <h3>داود نصرالهی</h3>
                 <div class="subtitle">مدیر عامل</div>
-                <a href="tel:09121278025" class="contact-link">
-                    <i class="fas fa-phone-volume me-1"></i> ۰۹۱۲۱۲۷۸۰۲۵
-                </a>
+                <div class="phone-number">
+                    <i class="fas fa-phone"></i> ۰۹۱۲۱۲۷۸۰۲۵
+                </div>
+                <div class="contact-actions">
+                    <a href="tel:09121278025" class="contact-link call-link">
+                        <i class="fas fa-phone"></i> تماس
+                    </a>
+                    <a href="https://wa.me/989121278025" target="_blank" class="contact-link whatsapp-link">
+                        <i class="fab fa-whatsapp"></i> واتساپ
+                    </a>
+                </div>
             </div>
 
-            <!-- مدیر تولید -->
+            <!-- 2. مدیر تولید -->
             <div class="contact-card" style="border-top-color: var(--secondary-green);">
                 <i class="fas fa-user-cog" style="color: var(--secondary-green);"></i>
                 <h3>مصطفی نصرالهی</h3>
                 <div class="subtitle">مدیر تولید</div>
-                <a href="tel:09123952064" class="contact-link">
-                    <i class="fas fa-phone-volume me-1"></i> ۰۹۱۲۳۹۵۲۰۶۴
-                </a>
+                <div class="phone-number">
+                    <i class="fas fa-phone"></i> ۰۹۱۲۳۹۵۲۰۶۴
+                </div>
+                <div class="contact-actions">
+                    <a href="tel:09123952064" class="contact-link call-link">
+                        <i class="fas fa-phone"></i> تماس
+                    </a>
+                    <a href="https://wa.me/989123952064" target="_blank" class="contact-link whatsapp-link">
+                        <i class="fab fa-whatsapp"></i> واتساپ
+                    </a>
+                </div>
             </div>
 
-            <!-- ایمیل -->
+            <!-- 3. ایمیل -->
             <div class="contact-card" style="border-top-color: var(--accent-orange);">
                 <i class="fas fa-envelope" style="color: var(--accent-orange);"></i>
                 <h3>ایمیل</h3>
                 <div class="subtitle">ارسال درخواست</div>
-                <a href="mailto:alvandfidar@gmail.com" class="contact-link">
+                <a href="mailto:alvandfidar@gmail.com" class="single-link">
                     <i class="fas fa-paper-plane me-1"></i> alvandfidar@gmail.com
                 </a>
             </div>
 
-            <!-- وب‌سایت -->
+            <!-- 4. وب‌سایت (اصلاح شد) -->
             <div class="contact-card" style="border-top-color: #8b5cf6;">
                 <i class="fas fa-globe" style="color: #8b5cf6;"></i>
                 <h3>وب‌سایت</h3>
                 <div class="subtitle">مشاهده محصولات</div>
-                <a href="https://fidaralvandplast.ir" target="_blank" class="contact-link">
-                    <i class="fas fa-external-link-alt me-1"></i> fidaralvandplast.ir
+                <a href="https://fidaralvand.com/" target="_blank" class="single-link">
+                    <i class="fas fa-external-link-alt me-1"></i> fidaralvand.com
                 </a>
             </div>
 
@@ -566,7 +642,7 @@
         </div>
     </section>
 
-    <!-- ===== اینستاگرام ===== -->
+    <!-- ===== اینستاگرام (اصلاح شد) ===== -->
     <section class="social-section">
         <div class="container">
             <h2>ما را در اینستاگرام دنبال کنید</h2>
@@ -593,8 +669,8 @@
             </div>
             <p class="tagline">تولیدکننده انواع نی نوشیدنی با استانداردهای بین‌المللی</p>
             <div class="footer-links">
-                <a href="https://fidaralvandplast.ir" target="_blank">
-                    <i class="fas fa-globe me-1"></i> fidaralvandplast.ir
+                <a href="https://fidaralvand.com/" target="_blank">
+                    <i class="fas fa-globe me-1"></i> fidaralvand.com
                 </a>
             </div>
             <div class="made-in-iran">
